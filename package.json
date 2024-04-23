@@ -1,0 +1,85 @@
+{
+	"name": "code-with-pishro",
+	"displayName": "Code with Pishro",
+	"description": "کد زدن با پیشرو",
+	"version": "1.0.0",
+	"publisher": "Hesam Yusefpur",
+	"homepage": "https://github.com/hesam-init",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/hesam-init/code-with-pishro"
+	},
+	"engines": {
+		"vscode": "^1.61.0"
+	},
+	"categories": [
+		"Visualization"
+	],
+	"icon": "assets/icon.png",
+	"galleryBanner": {
+		"color": "#d69c27",
+		"theme": "dark"
+	},
+	"keywords": [
+		"رضا پیشرو",
+		"دیباگر",
+		"عیب یاب"
+	],
+	"__metadata": {
+		"publisherDisplayName": "hesam-init"
+	},
+	"activationEvents": [
+		"onCommand:in-your-face.openview.focus",
+		"onView:in-your-face.openview"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "custom-activitybar",
+					"title": "Pishro",
+					"icon": "assets/icon.svg"
+				}
+			]
+		},
+		"views": {
+			"custom-activitybar": [
+				{
+					"type": "webview",
+					"id": "code-with-pishro.openview",
+					"name": "Code with Pishro",
+					"contextualTitle": "Code with Pishro"
+				}
+			]
+		},
+		"commands": [
+			{
+				"command": "code-with-pishro.openview.focus",
+				"category": "Pishro",
+				"title": "Open Sidebar",
+				"icon": "$(clear-all)"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "pnpm run compile",
+		"compile": "tsc -p ./",
+		"dev": "tsc -watch -p ./",
+		"pretest": "pnpm run compile && pnpm run lint",
+		"lint": "biome lint ./src",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.7.1",
+		"@types/glob": "^8.1.0",
+		"@types/mocha": "^10.0.6",
+		"@types/node": "~20.12.7",
+		"@types/vscode": "^1.88.0",
+		"@vscode/test-electron": "^2.3.9",
+		"glob": "^10.3.12",
+		"mocha": "^10.4.0",
+		"typescript": "^5.4.5"
+	}
+}

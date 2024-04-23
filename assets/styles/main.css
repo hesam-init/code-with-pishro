@@ -1,0 +1,17 @@
+body {
+  background-color: transparent;
+  max-width: 100%;
+}
+
+.pishroFace {
+  border-radius: 12px;
+  border: #fff 1px solid;
+}
+
+.errorContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: #000 1px solid;
+}
