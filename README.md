@@ -1,10 +1,8 @@
-# In Your Face : Incredible ver
+# Code with Pishro
 
 ## Summary
 
 You can see faces that change with the number of source code errors.
-
-You can disable sound in the configuration (`Uncanny: Sound`).
 
 ## Usage
 
